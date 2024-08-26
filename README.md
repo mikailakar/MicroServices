@@ -23,42 +23,42 @@ This project is a microservices-based architecture implemented using .NET 8 and 
 - **Endpoints:**
   - `GET /api/orders` - Retrieve all orders.
   - `POST /api/orders` - Create a new order.
-  - `GET /api/orders/{orderId}` - Retrieve order details, including user and product names.
+  - `GET /api/orders/{orderId}` - Retrieve order details, including user and product information.
     - **Details**: Reaches UserService and ProductService. Uses `GET /api/users/{id}` and `GET /api/products/{id}` from these services to retrieve user and product information.
 
 ## Configuration
 
 Each service has its own database context and is configured to use Entity Framework Core for data access. The services are set up to communicate with each other through HTTP requests.
 
-### User Service
+### UserService
 
 - **Port:** 7188
 - **Database Context:** `UserContext`
 - **Models:** `User`
 
-### Product Service
+### ProductService
 
 - **Port:** 7197
 - **Database Context:** `ProductContext`
 - **Models:** `Product`
 
-### Order Service
+### OrderService
 
 - **Port:** 7138
 - **Database Context:** `OrderContext`
 - **Models:** `Order`
 - **DTOs:** `UserDto`, `ProductDto`
-- **Dependencies:** Requires User Service and Product Service to be running.
+- **Dependencies:** Requires UserService and ProductService to be running.
 
-Ensure that each service is running on its specified port. The OrderService requires both the UserService and ProductService to be available to retrieve user and product names.
+Ensure that each service is running on its specified port. The OrderService requires both the UserService and ProductService to be available to retrieve user and product information.
 
 ## Swagger
 
-Each service includes Swagger UI for API documentation and testing. Access Swagger UI at the following URLs:
+Each service includes Swagger for testing. You can access these at the following URLs:
 
-- User Service: `https://localhost:7188/swagger`
-- Product Service: `https://localhost:7197/swagger`
-- Order Service: `https://localhost:7138/swagger`
+- UserService: `https://localhost:7188/swagger`
+- ProductService: `https://localhost:7197/swagger`
+- OrderService: `https://localhost:7138/swagger`
 
 ## Contact
 
