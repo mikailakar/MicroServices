@@ -1,6 +1,6 @@
 # MicroServices
 
-This project is a microservices-based architecture implemented using .NET 8 and Entity Framework Core. The solution consists of three services: UserService, ProductService, and OrderService. Each service is responsible for its own domain and communicates with the others using HTTP APIs.
+This project is a microservices-based architecture implemented using .NET 8 and Entity Framework Core. The solution consists of three micro-services: UserService, ProductService, and OrderService. MainService handle interactions between these services using HTTP APIs where each is responsible for its own domain.
 
 ## Services
 
@@ -22,13 +22,21 @@ This project is a microservices-based architecture implemented using .NET 8 and 
 
 - **Endpoints:**
   - `GET /api/orders` - Retrieve all orders.
+  - `GET /api/orders/{id}` - Retrieve an order by ID.
   - `POST /api/orders` - Create a new order.
-  - `GET /api/orders/{orderId}` - Retrieve order details, including user and product information.
     - **Details**: Reaches UserService and ProductService. Uses `GET /api/users/{id}` and `GET /api/products/{id}` from these services to retrieve user and product information.
 
 ## Configuration
 
 Each service has its own database context and is configured to use Entity Framework Core for data access. The services are set up to communicate with each other through HTTP requests.
+
+### MainService
+
+- **Description**: Orchestrates operations across `UserService`, `ProductService`, and `OrderService`.
+- **Port:** 7133
+- **DTOs:** `UserDto`, `ProductDto`, `OrderDto`
+- **Dependencies:** Requires UserService, ProductService and OrderService to be running.
+  - **Note**: `MainService` simplifies the interaction with the microservices by providing a unified interface.
 
 ### UserService
 
@@ -47,15 +55,12 @@ Each service has its own database context and is configured to use Entity Framew
 - **Port:** 7138
 - **Database Context:** `OrderContext`
 - **Models:** `Order`
-- **DTOs:** `UserDto`, `ProductDto`
-- **Dependencies:** Requires UserService and ProductService to be running.
-
-Ensure that each service is running on its specified port. The OrderService requires both the UserService and ProductService to be available to retrieve user and product information.
 
 ## Swagger
 
 Each service includes Swagger for testing. You can access these at the following URLs:
 
+- MainService: `https://localhost:7133/swagger`
 - UserService: `https://localhost:7188/swagger`
 - ProductService: `https://localhost:7197/swagger`
 - OrderService: `https://localhost:7138/swagger`
