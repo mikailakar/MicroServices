@@ -24,7 +24,6 @@ This project is a microservices-based architecture implemented using .NET 8 and 
   - `GET /api/orders` - Retrieve all orders.
   - `GET /api/orders/{id}` - Retrieve an order by ID.
   - `POST /api/orders` - Create a new order.
-    - **Details**: Reaches UserService and ProductService. Uses `GET /api/users/{id}` and `GET /api/products/{id}` from these services to retrieve user and product information.
 
 ## Configuration
 
