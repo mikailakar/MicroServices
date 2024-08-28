@@ -4,6 +4,12 @@ This project is a microservices-based architecture implemented using .NET 8 and 
 
 ## Services
 
+### MainService
+
+- **Description**: Orchestrates operations across `UserService`, `ProductService`, and `OrderService`.
+- **Endpoints**:
+  - `POST /api/main/orders/{id}` - Retrieve order details by ID, including user and product names.
+
 ### UserService
 
 - **Endpoints:**
@@ -31,7 +37,6 @@ Each service has its own database context and is configured to use Entity Framew
 
 ### MainService
 
-- **Description**: Orchestrates operations across `UserService`, `ProductService`, and `OrderService`.
 - **Port:** 7133
 - **DTOs:** `UserDto`, `ProductDto`, `OrderDto`
 - **Dependencies:** Requires `UserService`, `ProductService` and `OrderService` to be running.
