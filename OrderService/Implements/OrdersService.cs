@@ -21,20 +21,18 @@ namespace OrderService.Implements
         {
             return await _context.Orders.ToListAsync();
         }
-        public async Task<Order> CreateOrderAsync(int userId, int productId, int amount)
+        public async Task<Order> CreateOrderAsync(Order order)
         {
-            var order = new Order
-            {
-                UserId = userId,
-                ProductId = productId,
-                Amount = amount,
-                OrderDate = DateTime.UtcNow
-            };
             _context.Orders.Add(order);
             await _context.SaveChangesAsync();
             return order;
         }
-        public async Task<object> GetOrderDetailsAsync(int orderId)
+        public async Task<Order> GetOrderByIdAsync(int orderId)
+        {
+            var order = await _context.Orders.FindAsync(orderId);
+            return order;
+        }
+        /*public async Task<object> GetOrderDetailsAsync(int orderId)
         {
             var order = await _context.Orders.FindAsync(orderId);
             if (order == null)
@@ -68,6 +66,6 @@ namespace OrderService.Implements
             }
             var product = await response.Content.ReadFromJsonAsync<ProductDto>();
             return product?.Name;
-        }
+        }*/
     }
 }

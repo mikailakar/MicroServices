@@ -28,19 +28,9 @@
     "Order": 0,
     "Parameters": [
       {
-        "Name": "userId",
-        "Type": "System.Int32",
-        "IsRequired": false
-      },
-      {
-        "Name": "productId",
-        "Type": "System.Int32",
-        "IsRequired": false
-      },
-      {
-        "Name": "amount",
-        "Type": "System.Int32",
-        "IsRequired": false
+        "Name": "order",
+        "Type": "OrderService.Models.Order",
+        "IsRequired": true
       }
     ],
     "ReturnTypes": [
@@ -57,7 +47,7 @@
   },
   {
     "ContainingType": "OrderService.Controllers.OrdersController",
-    "Method": "GetOrderDetails",
+    "Method": "GetOrderById",
     "RelativePath": "api/Orders/{orderId}",
     "HttpMethod": "GET",
     "IsController": true,
@@ -69,6 +59,16 @@
         "IsRequired": true
       }
     ],
-    "ReturnTypes": []
+    "ReturnTypes": [
+      {
+        "Type": "OrderService.Models.Order",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
   }
 ]

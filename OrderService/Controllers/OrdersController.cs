@@ -25,16 +25,16 @@ namespace OrderService.Controllers
         }
         // POST: api/orders
         [HttpPost]
-        public async Task<ActionResult<Order>> CreateOrder([FromQuery] int userId, [FromQuery] int productId, [FromQuery] int amount)
+        public async Task<ActionResult<Order>> CreateOrder(Order order)
         {
-            var order = await _orderService.CreateOrderAsync(userId, productId, amount);
+            var createdOrder = await _orderService.CreateOrderAsync(order);
             return CreatedAtAction(nameof(GetAllOrders), new { id = order.Id }, order);
         }
         // GET: api/orders/{orderId}
         [HttpGet("{orderId}")]
-        public async Task<ActionResult<object>> GetOrderDetails(int orderId)
+        public async Task<ActionResult<Order>> GetOrderById(int orderId)
         {
-            var orderDetails = await _orderService.GetOrderDetailsAsync(orderId);
+            var orderDetails = await _orderService.GetOrderByIdAsync(orderId);
             if (orderDetails == null)
             {
                 return NotFound();
