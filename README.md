@@ -34,7 +34,7 @@ Each service has its own database context and is configured to use Entity Framew
 - **Description**: Orchestrates operations across `UserService`, `ProductService`, and `OrderService`.
 - **Port:** 7133
 - **DTOs:** `UserDto`, `ProductDto`, `OrderDto`
-- **Dependencies:** Requires UserService, ProductService and OrderService to be running.
+- **Dependencies:** Requires `UserService`, `ProductService` and `OrderService` to be running.
   - **Note**: `MainService` simplifies the interaction with the microservices by providing a unified interface.
 
 ### UserService
