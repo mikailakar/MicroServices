@@ -68,7 +68,14 @@ Each service has its own database context and is configured to use Entity Framew
 
 Each service includes Swagger for testing. You can access these at the following URLs:
 
-- MainService: `https://localhost:7133/swagger`
 - UserService: `https://localhost:7188/swagger`
 - ProductService: `https://localhost:7197/swagger`
 - OrderService: `https://localhost:7138/swagger`
+
+## Postman
+
+Each service is accessible from MainService. You can access these by making `GET` or `POST` request in Postman:
+
+- UserService: `https://localhost:7133/users/`
+- ProductService: `https://localhost:7133/products/`
+- OrderService: `https://localhost:7133/orders/`
