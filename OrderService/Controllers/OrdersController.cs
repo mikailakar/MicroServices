@@ -41,5 +41,16 @@ namespace OrderService.Controllers
             }
             return Ok(orderDetails);
         }
+        // GET: api/orders/details/{orderId}
+        [HttpGet("details/{orderId}")]
+        public async Task<ActionResult<Order>> GetOrderDetails(int orderId)
+        {
+            var orderDetails = await _orderService.GetOrderDetailsAsync(orderId);
+            if (orderDetails == null)
+            {
+                return NotFound();
+            }
+            return Ok(orderDetails);
+        }
     }
 }

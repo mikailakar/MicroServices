@@ -9,6 +9,6 @@ namespace OrderService.Interfaces
         Task<IEnumerable<Order>> GetAllOrdersAsync();
         Task<Order> CreateOrderAsync(Order order);
         Task<Order> GetOrderByIdAsync(int orderId);
-        //Task<object> GetOrderDetailsAsync(int orderId);
+        Task<object> GetOrderDetailsAsync(int orderId);
     }
 }

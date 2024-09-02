@@ -32,7 +32,7 @@ namespace OrderService.Implements
             var order = await _context.Orders.FindAsync(orderId);
             return order;
         }
-        /*public async Task<object> GetOrderDetailsAsync(int orderId)
+        public async Task<object> GetOrderDetailsAsync(int orderId)
         {
             var order = await _context.Orders.FindAsync(orderId);
             if (order == null)
@@ -66,6 +66,6 @@ namespace OrderService.Implements
             }
             var product = await response.Content.ReadFromJsonAsync<ProductDto>();
             return product?.Name;
-        }*/
+        }
     }
 }

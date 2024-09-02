@@ -3,16 +3,12 @@
   "WorkspaceRootPath": "C:\\Users\\Mikail\\source\\repos\\MicroServices\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{016A9732-6123-432B-9620-0C5AC7845215}|MainService\\MainService.csproj|c:\\users\\mikail\\source\\repos\\microservices\\mainservice\\implements\\mainservices.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{016A9732-6123-432B-9620-0C5AC7845215}|MainService\\MainService.csproj|solutionrelative:mainservice\\implements\\mainservices.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{016A9732-6123-432B-9620-0C5AC7845215}|MainService\\MainService.csproj|c:\\users\\mikail\\source\\repos\\microservices\\mainservice\\ocelot.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{016A9732-6123-432B-9620-0C5AC7845215}|MainService\\MainService.csproj|solutionrelative:mainservice\\ocelot.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{016A9732-6123-432B-9620-0C5AC7845215}|MainService\\MainService.csproj|c:\\users\\mikail\\source\\repos\\microservices\\mainservice\\controllers\\maincontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{016A9732-6123-432B-9620-0C5AC7845215}|MainService\\MainService.csproj|solutionrelative:mainservice\\controllers\\maincontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{016A9732-6123-432B-9620-0C5AC7845215}|MainService\\MainService.csproj|c:\\users\\mikail\\source\\repos\\microservices\\mainservice\\interfaces\\imainservices.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{016A9732-6123-432B-9620-0C5AC7845215}|MainService\\MainService.csproj|solutionrelative:mainservice\\interfaces\\imainservices.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{016A9732-6123-432B-9620-0C5AC7845215}|MainService\\MainService.csproj|c:\\users\\mikail\\source\\repos\\microservices\\mainservice\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{016A9732-6123-432B-9620-0C5AC7845215}|MainService\\MainService.csproj|solutionrelative:mainservice\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -22,41 +18,31 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 0,
+          "SelectedChildIndex": 1,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "MainServices.cs",
-              "DocumentMoniker": "C:\\Users\\Mikail\\source\\repos\\MicroServices\\MainService\\Implements\\MainServices.cs",
-              "RelativeDocumentMoniker": "MainService\\Implements\\MainServices.cs",
-              "ToolTip": "C:\\Users\\Mikail\\source\\repos\\MicroServices\\MainService\\Implements\\MainServices.cs",
-              "RelativeToolTip": "MainService\\Implements\\MainServices.cs",
+              "DocumentIndex": 1,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Users\\Mikail\\source\\repos\\MicroServices\\MainService\\Program.cs",
+              "RelativeDocumentMoniker": "MainService\\Program.cs",
+              "ToolTip": "C:\\Users\\Mikail\\source\\repos\\MicroServices\\MainService\\Program.cs",
+              "RelativeToolTip": "MainService\\Program.cs",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-08-28T11:29:18.509Z",
+              "WhenOpened": "2024-09-02T10:05:50.392Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "IMainServices.cs",
-              "DocumentMoniker": "C:\\Users\\Mikail\\source\\repos\\MicroServices\\MainService\\Interfaces\\IMainServices.cs",
-              "RelativeDocumentMoniker": "MainService\\Interfaces\\IMainServices.cs",
-              "ToolTip": "C:\\Users\\Mikail\\source\\repos\\MicroServices\\MainService\\Interfaces\\IMainServices.cs",
-              "RelativeToolTip": "MainService\\Interfaces\\IMainServices.cs",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-08-28T11:25:35.314Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "MainController.cs",
-              "DocumentMoniker": "C:\\Users\\Mikail\\source\\repos\\MicroServices\\MainService\\Controllers\\MainController.cs",
-              "RelativeDocumentMoniker": "MainService\\Controllers\\MainController.cs",
-              "ToolTip": "C:\\Users\\Mikail\\source\\repos\\MicroServices\\MainService\\Controllers\\MainController.cs",
-              "RelativeToolTip": "MainService\\Controllers\\MainController.cs",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-08-28T11:20:11.755Z"
+              "DocumentIndex": 0,
+              "Title": "ocelot.json",
+              "DocumentMoniker": "C:\\Users\\Mikail\\source\\repos\\MicroServices\\MainService\\ocelot.json",
+              "RelativeDocumentMoniker": "MainService\\ocelot.json",
+              "ToolTip": "C:\\Users\\Mikail\\source\\repos\\MicroServices\\MainService\\ocelot.json",
+              "RelativeToolTip": "MainService\\ocelot.json",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2024-09-02T10:04:31.216Z",
+              "EditorCaption": ""
             }
           ]
         }
