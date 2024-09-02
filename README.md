@@ -1,6 +1,6 @@
 # MicroServices
 
-This project is a microservices-based architecture implemented using .NET 8 and Entity Framework Core. The solution consists of three micro-services: UserService, ProductService, and OrderService. MainService handle interactions between these services using HTTP APIs where each is responsible for its own domain.
+This project is a microservices-based architecture implemented using .NET 8 and Entity Framework Core. The solution consists of three micro-services: UserService, ProductService, and OrderService. MainService handle interactions between these services using Ocelot API Gateway where each is responsible for its own domain.
 
 ## Services
 
@@ -8,7 +8,9 @@ This project is a microservices-based architecture implemented using .NET 8 and 
 
 - **Description**: Orchestrates operations across `UserService`, `ProductService`, and `OrderService`.
 - **Endpoints**:
-  - `POST /api/main/orders/{id}` - Retrieve order details by ID, including user and product names.
+  - `POST GET /users/{id}` to `/api/users/{id}`
+  - `POST GET /products/{id}` to `/api/products/{id}`
+  - `POST GET /orders/{id}` to `/api/orders/{id}`
 
 ### UserService
 
